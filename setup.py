@@ -6,8 +6,6 @@ try:
 except ImportError:
     from distutils.core import setup
 
-from pytuya.const import __author__, __version__
-
 
 if len(sys.argv) <= 1:
     print("""
@@ -35,8 +33,8 @@ else:
 
 setup(
     name='pytuya',
-    author=__author__,
-    version=__version__,
+    author='clach04',
+    version='7.0.6',
     description='Python interface to ESP8266MOD WiFi smart devices from Shenzhen Xenon',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -58,6 +56,6 @@ setup(
     packages=['pytuya'],
     platforms='any',
     install_requires=[
-          'pyaes',  # NOTE this is optional, AES can be provided via PyCrypto or PyCryptodome
+          'pyaes==1.6.1',  # NOTE this is optional, AES can be provided via PyCrypto or PyCryptodome
       ],
 )
